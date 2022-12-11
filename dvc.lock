@@ -1,0 +1,12 @@
+schema: '2.0'
+stages:
+  dataPreprocessing:
+    cmd: python3 src/preprocessing.py
+    deps:
+    - path: dataset/spotify_millsongdata.csv
+      md5: 43362926568f939553de657b8be80d79
+      size: 74864162
+    outs:
+    - path: dataset/refactor.csv
+      md5: 4033af3bc4a9c6ae63396c0ebb9f2120
+      size: 62798155

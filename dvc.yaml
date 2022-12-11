@@ -1,0 +1,7 @@
+stages:
+  dataPreprocessing:
+    cmd: python3 src/preprocessing.py
+    deps:
+    - dataset/spotify_millsongdata.csv
+    outs:
+    - dataset/refactor.csv
