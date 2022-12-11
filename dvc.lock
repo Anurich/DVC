@@ -10,3 +10,14 @@ stages:
     - path: dataset/refactor.csv
       md5: 4033af3bc4a9c6ae63396c0ebb9f2120
       size: 62798155
+  ComputeEmbeddings:
+    cmd: python3 src/recommendationSystem.py
+    deps:
+    - path: dataset/refactor.csv
+      md5: 4033af3bc4a9c6ae63396c0ebb9f2120
+      size: 62798155
+    outs:
+    - path: embeddings/
+      md5: 768aa77a3591f563c4f72fa1721d8a44.dir
+      size: 88550528
+      nfiles: 1

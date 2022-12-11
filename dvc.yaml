@@ -5,3 +5,9 @@ stages:
     - dataset/spotify_millsongdata.csv
     outs:
     - dataset/refactor.csv
+  ComputeEmbeddings:
+    cmd: python3 src/recommendationSystem.py
+    deps:
+    - dataset/refactor.csv
+    outs:
+    - embeddings/
