@@ -22,7 +22,7 @@ class findEmbedding:
             np.save(fp, embeddings)
 
     def computeEmbeddings(self):
-        sentences = self.df["prepText"].values
+        sentences = self.df["allText"].values
         # let's compute the embeddding
         embeddings = []
         for sentence in tqdm(sentences):

@@ -8,6 +8,7 @@ class PREPROCESS:
         df = pd.read_csv(CONFIG.DATA_FILE)
         df["prepText"] = df["text"].apply(self.cleanString)
         df = df[["artist", "song", "prepText"]]
+        df["allText"] = df["artist"]+" "+df["song"] + " "+df["prepText"]
         # save the file 
         df.to_csv(CONFIG.REFRACTOR_FILE_PATH, index=False)
     
